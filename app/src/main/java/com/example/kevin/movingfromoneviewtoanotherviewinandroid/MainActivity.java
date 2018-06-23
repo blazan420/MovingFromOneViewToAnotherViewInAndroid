@@ -1,5 +1,6 @@
 package com.example.kevin.movingfromoneviewtoanotherviewinandroid;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override  // Whatever is in this onClick method will be executed
     public void onClick(View view) {
+
+        // Intent allows us to go from one activity to another activity...
+        Intent intent = new Intent();
+        intent.setClass(this, SecondActivity.class);
+
+        startActivity(intent);
 
     }
 }
